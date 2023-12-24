@@ -1,14 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Blackjack from './pages/blackjack'
-import './pages/css/main.css'
+import './css/main.css'
 
 
 
-
-// はじめはAppの中にあるIndexを表示する
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+function Index() {
+  return (
       <div className="background">
           <div className='selectBox'>
               <div className="title">
@@ -36,32 +31,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                   <h1>Let's Start</h1>
               </div>
               <div className="startButton">
-                <button onClick={() => {
-                  ReactDOM.createRoot(document.getElementById('root')!).render(
-                    <React.StrictMode>
-                      <Blackjack />
-                    </React.StrictMode>
-                  )
-                }
-                }>Start!</button>
+                <button>Start</button>
               </div>
           </div>
       </div>
-  </React.StrictMode>,
-)
+  )
+}
 
-
-// {
-//     const game = document.getElementById('game') as HTMLInputElement
-//     const level = document.getElementById('level') as HTMLInputElement
-//     const gameValue = game.value
-//     const levelValue = level.value
-//     console.log(gameValue, levelValue)
-//        if (gameValue === 'blackjack' && levelValue === 'easy') {
-//        ReactDOM.createRoot(document.getElementById('root')!).render(
-//            <React.StrictMode>
-//            <Blackjack />
-//            </React.StrictMode>
-//        )
-//        }
-//    }
+export default Index
